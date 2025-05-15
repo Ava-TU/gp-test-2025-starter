@@ -14,7 +14,7 @@ size = Vector2(16, 16)
 [node name="Game" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(583, 322)
+position = Vector2(222, 329)
 script = ExtResource("1_qxrlw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
@@ -27,8 +27,11 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_2poj3")
 
 [node name="EnemySpawner" type="Node2D" parent="."]
-position = Vector2(1211, 325)
+position = Vector2(820, 58)
 script = ExtResource("3_wrm1d")
+
+[node name="Timer" type="Timer" parent="EnemySpawner"]
+autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -60,4 +63,5 @@ shape = SubResource("RectangleShape2D_wrm1d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone/DeathHitBox"]
 shape = SubResource("RectangleShape2D_3dryh")
 
+[connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="_on_timer_timeout"]
 [connection signal="area_entered" from="DeathZone/DeathHitBox" to="EnemySpawner" method="_on_death_hit_box_area_entered"]

@@ -13,18 +13,18 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	SpawnEnemy(1)
+#func _process(delta: float) -> void:
+	##SpawnEnemy(1)
 
-
-func SpawnEnemy(n):
-	var s = get_viewport().size
-	#var offset = randf_range(100, -100)
-	var enemy = enemies_scene.instantiate()
-	enemy.position.y = randf_range(20, s.x - 20)
-	#global_position.x += offset
-	#enemy.position.y = randf_range(100, 400)
-	add_child(enemy)
+#
+#func SpawnEnemy(n):
+	#var s = get_viewport().size
+	##var offset = randf_range(100, -100)
+	#var enemy = enemies_scene.instantiate()
+	#enemy.position.y = randf_range(-300, s.x - 300)
+	##global_position.x += offset
+	##enemy.position.y = randf_range(100, 400)
+	#add_child(enemy)
 	
 
 
@@ -32,3 +32,19 @@ func _on_death_hit_box_area_entered(area: Area2D) -> void:
 	print ("Destroy Enemies")
 	queue_free()
 	pass # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	var s = get_viewport().size
+	#var offset = randf_range(100, -100)
+	var enemy = enemies_scene.instantiate()
+	enemy.position.y = randf_range(0, s.x - 300)
+	#global_position.x += offset
+	#enemy.position.y = randf_range(100, 400)
+	add_child(enemy)
+	#var s = get_viewport().size
+	#var enemy = enemies_scene.instantiate()
+	#enemy.position.x = randf_range(-300, s.x - 300)
+	#enemy.position.y = 50
+	#add_child(enemy)
+	#pass # Replace with function body.
