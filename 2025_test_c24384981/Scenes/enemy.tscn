@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://osm44ei2era7"]
 
-[ext_resource type="Script" uid="uid://c0obalshn41pr" path="res://Scenes/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://c0obalshn41pr" path="res://Scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://fpbodwggffvy" path="res://Sprites/ServingMannequinCover2.jpg" id="1_hghv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]

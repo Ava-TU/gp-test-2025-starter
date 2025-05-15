@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://btvnshpe0m8fc"]
 
 [ext_resource type="Texture2D" uid="uid://dss2vnclavmtk" path="res://Sprites/32x32white.png" id="1_ebmjs"]
-[ext_resource type="Script" uid="uid://cmfjtnx7g3p7s" path="res://Scenes/player.gd" id="1_qxrlw"]
-[ext_resource type="Script" uid="uid://c5th7yxsb3uuc" path="res://Scenes/enemy_spawner.gd" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://cmfjtnx7g3p7s" path="res://Scripts/player.gd" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://c5th7yxsb3uuc" path="res://Scripts/enemy_spawner.gd" id="3_wrm1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2poj3"]
 size = Vector2(16, 16)
