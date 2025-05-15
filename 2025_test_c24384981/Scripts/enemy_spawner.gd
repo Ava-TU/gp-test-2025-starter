@@ -35,15 +35,6 @@ func _on_death_hit_box_area_entered(area: Area2D) -> void:
 
 func _on_timer_timeout() -> void:
 	var s = get_viewport().size
-	#var offset = randf_range(100, -100)
 	var enemy = enemies_scene.instantiate()
 	enemy.position.y = randf_range(0, s.x - 100)
-	#global_position.x += offset
-	#enemy.position.y = randf_range(100, 400)
 	add_child(enemy)
-	#var s = get_viewport().size
-	#var enemy = enemies_scene.instantiate()
-	#enemy.position.x = randf_range(-300, s.x - 300)
-	#enemy.position.y = 50
-	#add_child(enemy)
-	#pass # Replace with function body.
