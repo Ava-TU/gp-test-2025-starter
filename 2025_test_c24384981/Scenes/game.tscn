@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://btvnshpe0m8fc"]
+[gd_scene load_steps=7 format=3 uid="uid://btvnshpe0m8fc"]
 
 [ext_resource type="Texture2D" uid="uid://dss2vnclavmtk" path="res://Sprites/32x32white.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://cmfjtnx7g3p7s" path="res://Scripts/player.gd" id="1_qxrlw"]
@@ -6,6 +6,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2poj3"]
 size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dryh"]
 
 [node name="Game" type="Node2D"]
 
@@ -37,9 +41,23 @@ theme_override_font_sizes/font_size = 40
 text = "Lives:"
 
 [node name="Enemies" type="Label" parent="CanvasLayer"]
-offset_left = 25.0
+offset_left = 21.0
 offset_top = 59.0
-offset_right = 199.0
+offset_right = 195.0
 offset_bottom = 114.0
 theme_override_font_sizes/font_size = 40
 text = "Enemies:"
+
+[node name="DeathZone" type="StaticBody2D" parent="."]
+position = Vector2(-86, 315)
+scale = Vector2(4.6, 35.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+shape = SubResource("RectangleShape2D_wrm1d")
+
+[node name="DeathHitBox" type="Area2D" parent="DeathZone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone/DeathHitBox"]
+shape = SubResource("RectangleShape2D_3dryh")
+
+[connection signal="area_entered" from="DeathZone/DeathHitBox" to="EnemySpawner" method="_on_death_hit_box_area_entered"]

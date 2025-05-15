@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	var offset = randf_range(200, 600)
+	#var offset = randf_range(200, 600)
 	position.x += -speed * delta
 
 
