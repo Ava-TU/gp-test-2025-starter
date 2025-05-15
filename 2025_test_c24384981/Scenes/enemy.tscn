@@ -20,6 +20,7 @@ texture = ExtResource("1_hghv2")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="HitBox"]
 amount = 12
+lifetime = 0.5
 speed_scale = 1.65
 explosiveness = 0.09
 emission_shape = 1
@@ -27,5 +28,5 @@ emission_sphere_radius = 25.0
 direction = Vector2(50, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
-scale_amount_max = 3.0
+scale_amount_max = 2.0
 color = Color(1, 0.627451, 0, 1)
