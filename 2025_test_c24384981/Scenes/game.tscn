@@ -20,3 +20,5 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_2poj3")
+
+[node name="EnemySpawner" type="Node2D" parent="."]
