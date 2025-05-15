@@ -29,4 +29,8 @@ func _physics_process(delta: float) -> void:
 func _on_player_hit_box_area_entered(area: Area2D) -> void:
 	Global.health -= 1
 	print ("Player Hit")
+	
+	if Global.health == 0:
+		print ("You Died")
+		get_tree().change_scene_to_file("res://Scenes/death_scene.tscn")
 	pass # Replace with function body.
