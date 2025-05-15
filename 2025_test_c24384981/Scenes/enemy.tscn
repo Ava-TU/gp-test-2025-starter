@@ -8,14 +8,15 @@ size = Vector2(16, 20)
 
 [node name="Enemy" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(205, 103)
-gravity_scale = 0.0
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(260, 126)
 script = ExtResource("1_1f0kj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.100006, -0.0699997)
 shape = SubResource("RectangleShape2D_ne65n")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0.100021, -0.0699921)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("1_hghv2")

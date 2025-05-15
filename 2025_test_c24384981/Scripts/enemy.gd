@@ -8,5 +8,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-func _physics_process(delta: float) -> void:
-	var movement = Vector2(20, speed)
+func _process(delta: float) -> void:
+	position.x += -speed * delta
