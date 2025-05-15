@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://btvnshpe0m8fc"]
+[gd_scene load_steps=8 format=3 uid="uid://btvnshpe0m8fc"]
 
 [ext_resource type="Texture2D" uid="uid://dss2vnclavmtk" path="res://Sprites/32x32white.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://cmfjtnx7g3p7s" path="res://Scripts/player.gd" id="1_qxrlw"]
@@ -6,6 +6,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2poj3"]
 size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 
@@ -25,6 +27,11 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_2poj3")
+
+[node name="PlayerHitBox" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerHitBox"]
+shape = SubResource("RectangleShape2D_wowpa")
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 position = Vector2(820, 58)
@@ -63,5 +70,6 @@ shape = SubResource("RectangleShape2D_wrm1d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone/DeathHitBox"]
 shape = SubResource("RectangleShape2D_3dryh")
 
+[connection signal="area_entered" from="Player/PlayerHitBox" to="Player" method="_on_player_hit_box_area_entered"]
 [connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="_on_timer_timeout"]
 [connection signal="area_entered" from="DeathZone/DeathHitBox" to="EnemySpawner" method="_on_death_hit_box_area_entered"]

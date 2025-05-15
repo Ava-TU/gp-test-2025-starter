@@ -1,30 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://osm44ei2era7"]
+[gd_scene load_steps=4 format=3 uid="uid://osm44ei2era7"]
 
 [ext_resource type="Script" uid="uid://c0obalshn41pr" path="res://Scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://fpbodwggffvy" path="res://Sprites/ServingMannequinCover2.jpg" id="1_hghv2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
-size = Vector2(16, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afpow"]
 
 [node name="Enemy" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(260, 126)
 script = ExtResource("1_1f0kj")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(0.100021, -0.0699921)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("1_hghv2")
+[node name="HitBox" type="Area2D" parent="."]
+position = Vector2(260, 126)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_1f0kj")
-
-[node name="HitBox" type="Area2D" parent="StaticBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 shape = SubResource("RectangleShape2D_afpow")
 
-[connection signal="area_entered" from="StaticBody2D/HitBox" to="StaticBody2D" method="_on_hit_box_area_entered"]
+[node name="Sprite2D" type="Sprite2D" parent="HitBox"]
+position = Vector2(0.100037, -0.0699921)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_hghv2")

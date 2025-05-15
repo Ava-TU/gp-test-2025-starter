@@ -24,3 +24,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, speed)
 
 	move_and_slide()
+
+
+func _on_player_hit_box_area_entered(area: Area2D) -> void:
+	Global.health -= 1
+	print ("Player Hit")
+	pass # Replace with function body.
