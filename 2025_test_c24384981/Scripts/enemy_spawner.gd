@@ -10,21 +10,6 @@ var offset = 1
 func _ready() -> void:
 	enemies_scene = load("res://Scenes/enemy.tscn")
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	##SpawnEnemy(1)
-
-#
-#func SpawnEnemy(n):
-	#var s = get_viewport().size
-	##var offset = randf_range(100, -100)
-	#var enemy = enemies_scene.instantiate()
-	#enemy.position.y = randf_range(-300, s.x - 300)
-	##global_position.x += offset
-	##enemy.position.y = randf_range(100, 400)
-	#add_child(enemy)
 	
 
 
