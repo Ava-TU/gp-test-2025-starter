@@ -17,3 +17,15 @@ shape = SubResource("RectangleShape2D_afpow")
 position = Vector2(0.100037, -0.0699921)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("1_hghv2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="HitBox"]
+emitting = false
+amount = 12
+one_shot = true
+speed_scale = 1.65
+explosiveness = 0.09
+emission_shape = 1
+emission_sphere_radius = 25.0
+direction = Vector2(50, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
