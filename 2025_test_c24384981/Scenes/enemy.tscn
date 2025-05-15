@@ -27,3 +27,5 @@ emission_sphere_radius = 25.0
 direction = Vector2(50, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
+scale_amount_max = 3.0
+color = Color(1, 0.627451, 0, 1)
