@@ -11,7 +11,9 @@ config_version=5
 [application]
 
 config/name="2025_Test_C24384981"
+run/main_scene="uid://btvnshpe0m8fc"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/bg_color=Color(0.444309, 0.107531, 0.437505, 1)
 config/icon="res://icon.svg"
 
 [autoload]
