@@ -60,7 +60,7 @@ theme_override_font_sizes/font_size = 40
 text = "Enemies:"
 
 [node name="DeathZone" type="StaticBody2D" parent="."]
-position = Vector2(612, 322)
+position = Vector2(-90, 322)
 scale = Vector2(4.6, 35.08)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
