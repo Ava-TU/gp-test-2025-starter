@@ -1,4 +1,4 @@
 extends Node
 
-var health = 5
+var health = 3
 var enemies = 0
