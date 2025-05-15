@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 func _on_player_hit_box_area_entered(area: Area2D) -> void:
 	Global.health -= 1
 	print ("Player Hit")
+	area.queue_free()
 	
 	if Global.health == 0:
 		print ("You Died")
