@@ -10,3 +10,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	position.x += -speed * delta
+
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	print ("Enemy Hit")
+	Global.health -= 1
+	pass # Replace with function body.
