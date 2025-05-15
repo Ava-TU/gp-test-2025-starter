@@ -23,4 +23,12 @@ offset_bottom = 484.0
 theme_override_font_sizes/font_size = 50
 text = "Restart"
 
+[node name="EnemySurvived" type="Label" parent="CanvasLayer"]
+offset_left = 333.0
+offset_top = 306.0
+offset_right = 771.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 50
+text = "Enemies Survived:"
+
 [connection signal="pressed" from="CanvasLayer/Restart" to="." method="_on_restart_pressed"]
