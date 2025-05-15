@@ -9,10 +9,11 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	var offset = randf_range(200, 600)
 	position.x += -speed * delta
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	print ("Enemy Hit")
-	Global.health -= 1
+	#Global.health -= 1
 	pass # Replace with function body.
