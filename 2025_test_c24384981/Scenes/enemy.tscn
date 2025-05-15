@@ -19,9 +19,7 @@ scale = Vector2(0.015, 0.015)
 texture = ExtResource("1_hghv2")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="HitBox"]
-emitting = false
 amount = 12
-one_shot = true
 speed_scale = 1.65
 explosiveness = 0.09
 emission_shape = 1

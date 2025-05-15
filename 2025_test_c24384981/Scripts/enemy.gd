@@ -1,7 +1,7 @@
 extends Node2D
 
 var speed = 125
-
+var enemyEmit = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

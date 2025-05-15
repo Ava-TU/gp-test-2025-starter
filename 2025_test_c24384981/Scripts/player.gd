@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 
+@onready var enemy = "res://Scripts/enemy.gd"
+
 var speed = 250
 
 
