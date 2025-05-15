@@ -30,7 +30,6 @@ func _ready() -> void:
 
 func _on_death_hit_box_area_entered(area: Area2D) -> void:
 	print ("Destroy Enemies")
-	queue_free()
 	pass # Replace with function body.
 
 
@@ -38,7 +37,7 @@ func _on_timer_timeout() -> void:
 	var s = get_viewport().size
 	#var offset = randf_range(100, -100)
 	var enemy = enemies_scene.instantiate()
-	enemy.position.y = randf_range(0, s.x - 300)
+	enemy.position.y = randf_range(0, s.x - 100)
 	#global_position.x += offset
 	#enemy.position.y = randf_range(100, 400)
 	add_child(enemy)
