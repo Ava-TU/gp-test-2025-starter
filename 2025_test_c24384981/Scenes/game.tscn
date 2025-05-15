@@ -34,7 +34,7 @@ shape = SubResource("RectangleShape2D_2poj3")
 shape = SubResource("RectangleShape2D_wowpa")
 
 [node name="EnemySpawner" type="Node2D" parent="."]
-position = Vector2(820, 58)
+position = Vector2(1043, -2)
 script = ExtResource("3_wrm1d")
 
 [node name="Timer" type="Timer" parent="EnemySpawner"]
@@ -60,7 +60,7 @@ theme_override_font_sizes/font_size = 40
 text = "Enemies:"
 
 [node name="DeathZone" type="StaticBody2D" parent="."]
-position = Vector2(-86, 315)
+position = Vector2(42, 315)
 scale = Vector2(4.6, 35.08)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]

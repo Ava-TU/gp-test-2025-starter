@@ -30,6 +30,8 @@ func _ready() -> void:
 
 func _on_death_hit_box_area_entered(area: Area2D) -> void:
 	print ("Destroy Enemies")
+	if area.is_in_group("enemy"):
+		area.queue_free()
 	pass # Replace with function body.
 
 
