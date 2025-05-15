@@ -71,6 +71,10 @@ shape = SubResource("RectangleShape2D_wrm1d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone/DeathHitBox"]
 shape = SubResource("RectangleShape2D_3dryh")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="area_entered" from="Player/PlayerHitBox" to="Player" method="_on_player_hit_box_area_entered"]
 [connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="_on_timer_timeout"]
 [connection signal="area_entered" from="DeathZone/DeathHitBox" to="EnemySpawner" method="_on_death_hit_box_area_entered"]
