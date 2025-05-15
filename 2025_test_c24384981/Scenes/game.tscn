@@ -38,7 +38,7 @@ position = Vector2(1146, -2)
 script = ExtResource("3_wrm1d")
 
 [node name="Timer" type="Timer" parent="EnemySpawner"]
-wait_time = 0.3
+wait_time = 0.1
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

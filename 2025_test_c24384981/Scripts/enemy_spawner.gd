@@ -22,6 +22,6 @@ func _on_death_hit_box_area_entered(area: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	var s = get_viewport().size
 	var enemy = enemies_scene.instantiate()
-	enemy.position.y = randf_range(0, s.x - 100)
+	enemy.position.y = randf_range(0, s.y + 150)
 	add_child(enemy)
 	Global.enemies += 1
