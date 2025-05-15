@@ -34,11 +34,11 @@ shape = SubResource("RectangleShape2D_2poj3")
 shape = SubResource("RectangleShape2D_wowpa")
 
 [node name="EnemySpawner" type="Node2D" parent="."]
-position = Vector2(1043, -2)
+position = Vector2(896, -2)
 script = ExtResource("3_wrm1d")
 
 [node name="Timer" type="Timer" parent="EnemySpawner"]
-wait_time = 0.1
+wait_time = 0.3
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

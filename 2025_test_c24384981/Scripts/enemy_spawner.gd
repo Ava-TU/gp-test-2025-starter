@@ -24,3 +24,4 @@ func _on_timer_timeout() -> void:
 	var enemy = enemies_scene.instantiate()
 	enemy.position.y = randf_range(0, s.x - 100)
 	add_child(enemy)
+	Global.enemies += 1
